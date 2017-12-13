@@ -40,8 +40,8 @@ class ValidationControllerSpec extends SpecBase {
     "email": "andy.dwelly@digital.hmrc.gov.uk",
     "phone": "07525932507",
     "propertyAddress": {
-      "line1": "78a High St",
-      "line2": "Ferring",
+      "addressLine1": "78a High St",
+      "addressLine2": "Ferring",
       "town": "Worthing",
       "county": "West Sussex",
       "postcode": "BN443SS"
@@ -60,8 +60,8 @@ class ValidationControllerSpec extends SpecBase {
     "email": "andy.dwelly@digital.hmrc.gov.uk",
     "phone": "07525932507",
     "propertyAddress": {
-      "line1": "78a High St",
-      "line2": "Ferring",
+      "addressLine1": "78a High St",
+      "addressLine2": "Ferring",
       "town": "Worthing",
       "county": "West Sussex",
       "postcode": "BN443SS"

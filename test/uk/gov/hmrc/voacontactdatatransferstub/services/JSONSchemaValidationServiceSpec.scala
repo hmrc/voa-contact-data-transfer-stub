@@ -35,8 +35,8 @@ class JSONSchemaValidationServiceSpec extends SpecBase {
     "email": "andy.dwelly@digital.hmrc.gov.uk",
     "phone": "07525932507",
     "propertyAddress": {
-      "line1": "78a High St",
-      "line2": "Ferring",
+      "addressLine1": "78a High St",
+      "addressLine2": "Ferring",
       "town": "Worthing",
       "county": "West Sussex",
       "postcode": "BN443SS"
@@ -136,12 +136,12 @@ class JSONSchemaValidationServiceSpec extends SpecBase {
       testError(validJSON.remove("phone"))
     }
 
-    "when given a Contact that the json validation schema reports that the line1 is the wrong type, return a message" in {
-      testError(validJSON.replace("line1", JsNumber(0)))
+    "when given a Contact that the json validation schema reports that the addressLine1 is the wrong type, return a message" in {
+      testError(validJSON.replace("addressLine1", JsNumber(0)))
     }
 
-    "when given a Contact that the json validation schema reports that the line1 is missing" in {
-      testError(validJSON.removeInner("propertyAddress", "line1"))
+    "when given a Contact that the json validation schema reports that the addressLine1 is missing" in {
+      testError(validJSON.removeInner("propertyAddress", "addressLine1"))
     }
 
     "when given a Contact that the json validation schema reports that the town is the wrong type, return a message" in {
@@ -168,8 +168,8 @@ class JSONSchemaValidationServiceSpec extends SpecBase {
       testError(validJSON.remove("message"))
     }
 
-    "when given a Contact that the json validation schema reports that the line2 is the wrong type, return a message" in {
-      testError(validJSON.replace("line2", JsNumber(0)))
+    "when given a Contact that the json validation schema reports that the addressLine2 is the wrong type, return a message" in {
+      testError(validJSON.replace("addressLine2", JsNumber(0)))
     }
 
     "when given a Contact that the json validation schema reports that the county is the wrong type, return a message" in {
